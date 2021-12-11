@@ -7,6 +7,7 @@ import lombok.Data;
 
 @Data
 public class Contribution {
+	private Long id;
 	private User user;
 	private DarkSite darkSite;
     private int horizonVisibility;

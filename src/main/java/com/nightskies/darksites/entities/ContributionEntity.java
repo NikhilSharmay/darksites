@@ -31,7 +31,7 @@ import lombok.Setter;
 @EqualsAndHashCode
 @Entity
 @Table(name="contributions")
-public class ContributionEntity extends Contribution {
+public class ContributionEntity{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	private Long id;

@@ -31,7 +31,11 @@ public class ContributionsService {
 		ContributionEntity contributionEntity = ModelEntityMapper.toEntity(contribution);
 		contributionEntity.setUserEntity(userEntity);
 		contributionEntity.setDarkSiteEntity(darkSiteEntity);
-		ModelEntityMapper.toDto(contributionsRepository.save(contributionEntity));
+		System.out.println(ModelEntityMapper.toDto(contributionsRepository.save(contributionEntity)).toString());
 		return true;
+	}
+	public Boolean update(Contribution contribution) {
+//		darkSitesRepository.
+		return null;
 	}
 }

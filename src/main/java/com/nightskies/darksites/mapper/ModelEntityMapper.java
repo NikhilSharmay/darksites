@@ -12,17 +12,20 @@ public class ModelEntityMapper{
 
 	public static Contribution toDto(ContributionEntity entity) {
 		Contribution dto = new Contribution();
+		dto.setId(entity.getId());
 		dto.setCampingAllowed(entity.isCampingAllowed());
 		dto.setDescription(entity.getDescription());
 		dto.setPhotos(entity.getPhotos());
 		dto.setHotelsAvailable(entity.isHotelsAvailable());
 		dto.setHorizonVisibility(entity.getHorizonVisibility());
 		dto.setUser(toDto(entity.getUserEntity()));
+		dto.setDarkSite(toDto(entity.getDarkSiteEntity()));
 		return dto;
 	}
 
 	public static DarkSite toDto(DarkSiteEntity entity) {
 		DarkSite dto = new DarkSite();
+		dto.setId(entity.getId());
 		dto.setLatitude(entity.getLatitude());
 		dto.setLongitude(entity.getLongitude());
 		dto.setLocationName(entity.getLocationName());
@@ -44,6 +47,7 @@ public class ModelEntityMapper{
 		entity.setHotelsAvailable(dto.isHotelsAvailable());
 		entity.setHorizonVisibility(dto.getHorizonVisibility());
 		entity.setUserEntity(toEntity(dto.getUser()));
+		entity.setId(dto.getId());
 		return entity;
 	}
 
@@ -52,6 +56,7 @@ public class ModelEntityMapper{
 		entity.setLatitude(dto.getLatitude());
 		entity.setLongitude(dto.getLongitude());
 		entity.setLocationName(dto.getLocationName());
+		entity.setId(dto.getId());
 		return entity;
 	}
 
